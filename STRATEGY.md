@@ -70,7 +70,14 @@ both the −5% stop and the +60% take-profit cap.
 
 ## Stress (grade-local --stress, rebuilt copies of the dev window)
 
-TBD — run on the submitted commit; results in the build report.
+10 block surrogates, run on the submitted commit (`--stress 10
+--stress-jobs 2`): **median −0.50 SOL, p10 −0.66, p90 −0.22 SOL; 9 of 10
+copies lost money**; the dev score (−0.314 SOL) sits above 7 of 10. Per-copy
+net PnL (SOL): −0.22, −0.51, −0.51, −0.41, −0.50, +0.02, −0.29, −0.66,
+−0.53, −0.50. Only one copy (blocks-06) made money, and only +0.02 SOL.
+The kit's own warning fired: "half or more of the rebuilt copies lost
+money". The dev result is not a fluke of one window's coins — the strategy
+loses on nearly every rebuilt window, including its 90th percentile.
 
 ## Risks, stated plainly
 
